@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Галерея JavaScript Анимаций</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>JavaScript Анимации</h1>
+      <nav class="tabs">
+        <button class="tab-btn active" data-tab="circle">Движущийся Круг</button>
+        <button class="tab-btn" data-tab="trajectory">Траектория</button>
+        <button class="tab-btn" data-tab="physics">Физика</button>
+        <button class="tab-btn" data-tab="theorem">Теорема Пифагора</button>
+        <button class="tab-btn" data-tab="transform">Трансформация</button>
+      </nav>
+    </header>
+    
+    <main>
+      <section id="circle" class="animation-container active">
+        <h2>Анимация Движения Круга</h2>
+        <div class="canvas-wrapper">
+          <canvas id="circleCanvas"></canvas>
+        </div>
+        <div class="controls">
+          <label>
+            Скорость:
+            <input type="range" id="circleSpeed" min="1" max="10" value="5">
+          </label>
+          <button id="resetCircle">Сброс</button>
+        </div>
+      </section>
+
+      <section id="trajectory" class="animation-container">
+        <h2>Анимация Траектории Точки</h2>
+        <div class="canvas-wrapper">
+          <canvas id="trajectoryCanvas"></canvas>
+        </div>
+        <div class="controls">
+          <label>
+            Сложность:
+            <input type="range" id="trajectoryComplexity" min="1" max="10" value="5">
+          </label>
+          <button id="resetTrajectory">Сброс</button>
+        </div>
+      </section>
+
+      <section id="physics" class="animation-container">
+        <h2>Физическая Симуляция</h2>
+        <div class="canvas-wrapper">
+          <canvas id="physicsCanvas"></canvas>
+        </div>
+        <div class="controls">
+          <label>
+            Гравитация:
+            <input type="range" id="gravity" min="1" max="20" value="9.8" step="0.1">
+          </label>
+          <label>
+            Отскок:
+            <input type="range" id="bounce" min="0.1" max="0.99" value="0.8" step="0.01">
+          </label>
+          <button id="resetPhysics">Сброс</button>
+        </div>
+      </section>
+
+      <section id="theorem" class="animation-container">
+        <h2>Теорема Пифагора</h2>
+        <div class="canvas-wrapper">
+          <canvas id="theoremCanvas"></canvas>
+        </div>
+        <div class="controls">
+          <label>
+            Угол:
+            <input type="range" id="theoremAngle" min="15" max="75" value="45">
+          </label>
+          <button id="resetTheorem">Сброс</button>
+        </div>
+      </section>
+
+      <section id="transform" class="animation-container">
+        <h2>Трансформация Фигуры</h2>
+        <div class="canvas-wrapper">
+          <canvas id="transformCanvas"></canvas>
+        </div>
+        <div class="controls">
+          <label>
+            Скорость:
+            <input type="range" id="transformSpeed" min="1" max="10" value="5">
+          </label>
+          <button id="resetTransform">Сброс</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Интерактивные JavaScript Анимации | Создано с помощью HTML, CSS и JavaScript</p>
+    </footer>
+  </div>
+  
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
